@@ -70,18 +70,6 @@ export default function AuthProvider({
         }
     }, [user]);
 
-    useEffect(() => {
-        const currentPage = window.location.pathname;
-
-        if (!user && currentPage !== "/login") {
-            ApiClient.request<User>("/v1/me", {
-                method: "GET",
-            }).then((userData) => {
-                setUser(userData);
-            });
-        }
-    }, []);
-
     return (
         <AuthContext.Provider value={{ user, login, logout }}>
             {children}
