@@ -96,6 +96,18 @@ export default function Login() {
                 ))}
             </label>
 
+            <div className="my-3">
+                <p className="text-gray-500 text-xs mt-1">
+                    For testing, you can use the following credentials:
+                </p>
+                <p className="text-gray-500 text-xs mt-1">
+                    Email: {defaultUser.email}
+                </p>
+                <p className="text-gray-500 text-xs mt-1">
+                    Password: {defaultUser.password}
+                </p>
+            </div>
+
             <div className="flex items-center justify-between">
                 <button
                     onClick={autoFillHandler}
